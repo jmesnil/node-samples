@@ -6,7 +6,7 @@ var args = process.argv.slice(2);
 
 if (args.length != 1) {
   console.log('Usage: node scraper.js <query sentence>');
-  process.exit();
+  process.exit(1);
 
 }
 
