@@ -1,7 +1,6 @@
 var request = require('request'),
     jsdom = require('jsdom');
 
-
 var args = process.argv.slice(2);
 
 if (args.length != 1) {
@@ -25,10 +24,8 @@ request({ uri:url }, function (error, response, body) {
     ]
   }, function (err, window) {
     var $ = window.jQuery;
-    //console.log($('body').html());
-    // jQuery is now loaded on the jsdom window created from 'agent.body'
     $('a.l').each(function() {
       console.log($(this).attr('href'));
-   });  
+    });  
   });
 });
