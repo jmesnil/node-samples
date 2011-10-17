@@ -21,7 +21,7 @@ if (args.length != 1) {
 // the query to search on Google
 var query = escape(args[0]);
 // Google URL that will be request and whose content will be scraped
-var url = 'http://www.google.fr/search?hl=fr&source=hp&ie=ISO-8859-1&q=' + query + '&btnG=Recherche+Google'
+var url = 'http://www.google.com/search?q=' + query;
 
 request({ uri: url }, function (error, response, body) {
   // nothing to do if we get an error from Google
